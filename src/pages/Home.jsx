@@ -19,9 +19,15 @@ export default function Home() {
 
         {/* BUTTONS */}
         <div className="home-buttons">
-          <a href="/resume.pdf" className="resume-download">Download Resume</a>
+          {/* FORCE DOWNLOAD */}
+          <a 
+            href="/resume-file.pdf"
+            download="Maheboob_Baig_Resume.pdf"
+            className="resume-download"
+          >
+            Download Resume
+          </a>
 
-          {/* Correct navigation */}
           <Link to="/contact" className="contact-btn">
             Contact Me
           </Link>
@@ -36,4 +42,3 @@ export default function Home() {
     </section>
   );
 }
-

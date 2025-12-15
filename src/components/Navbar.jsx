@@ -9,26 +9,27 @@ export default function Navbar() {
     <nav className="navbar">
 
       <div className="nav-container">
-        {/* Logo */}
         <div className="logo">Maheboob.</div>
 
-        {/* Hamburger Icon */}
-        <div
-          className="hamburger"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
+        <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
           ☰
         </div>
 
-        {/* Desktop Menu */}
         <ul className="nav-links desktop-menu">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/skills">Skills</Link></li>
           <li><Link to="/projects">Projects</Link></li>
           <li><Link to="/contact">Contact</Link></li>
+
           <li>
-            <a href="/resume.pdf" className="resume-btn">Resume</a>
+            <a 
+              href="/resume-file.pdf"
+              download="Maheboob_Baig_Resume.pdf"
+              className="resume-btn"
+            >
+              Resume
+            </a>
           </li>
         </ul>
       </div>
@@ -40,8 +41,15 @@ export default function Navbar() {
         <li onClick={() => setMenuOpen(false)}><Link to="/skills">Skills</Link></li>
         <li onClick={() => setMenuOpen(false)}><Link to="/projects">Projects</Link></li>
         <li onClick={() => setMenuOpen(false)}><Link to="/contact">Contact</Link></li>
+
         <li onClick={() => setMenuOpen(false)}>
-          <a href="/resume.pdf" className="resume-btn">Resume</a>
+          <a 
+            href="/resume-file.pdf"
+            download="Maheboob_Baig_Resume.pdf"
+            className="resume-btn"
+          >
+            Resume
+          </a>
         </li>
       </ul>
     </nav>
