@@ -1,0 +1,33 @@
+.projects-wrapper {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+.projects-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.project-title {
+  color: #00aaff;
+  margin-bottom: 10px;
+}
+
+.project-desc {
+  color: #cfeaff;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.project-tech {
+  font-size: 0.95rem;
+  color: #8cc9ff;
+}
+
+.project-tech span {
+  color: #00aaff;
+  font-weight: bold;
+}

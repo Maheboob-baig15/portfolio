@@ -1,0 +1,37 @@
+.contact-wrapper {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+.contact-container {
+  max-width: 700px;
+  margin: auto;
+  padding: 40px;
+  text-align: center;
+}
+
+.contact-text {
+  font-size: 1.2rem;
+  color: #cfeaff;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  color: #8cc9ff;
+}
+
+.contact-icons {
+  margin-top: 25px;
+}
+
+.contact-icons a {
+  font-size: 2rem;
+  margin: 0 15px;
+  color: #8cc9ff;
+  transition: 0.3s;
+}
+
+.contact-icons a:hover {
+  color: #00aaff;
+}
