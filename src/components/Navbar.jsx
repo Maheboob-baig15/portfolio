@@ -5,12 +5,14 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <nav className="navbar">
       {/* Logo */}
       <div className="logo">Maheboob.</div>
 
-      {/* Hamburger Icon (Mobile Only) */}
+      {/* Hamburger for mobile */}
       <div
         className="hamburger"
         onClick={() => setMenuOpen(!menuOpen)}
@@ -25,22 +27,26 @@ export default function Navbar() {
         <li><Link to="/skills">Skills</Link></li>
         <li><Link to="/projects">Projects</Link></li>
         <li><Link to="/contact">Contact</Link></li>
-        <li><a href="/resume.pdf" className="resume-btn">Resume</a></li>
+        <li>
+          <a href="/resume.pdf" target="_blank" className="resume-btn">
+            Resume
+          </a>
+        </li>
       </ul>
 
       {/* Mobile Menu */}
-      {menuOpen && (
-        <ul className="nav-links mobile-menu">
-          <li onClick={() => setMenuOpen(false)}><Link to="/">Home</Link></li>
-          <li onClick={() => setMenuOpen(false)}><Link to="/about">About</Link></li>
-          <li onClick={() => setMenuOpen(false)}><Link to="/skills">Skills</Link></li>
-          <li onClick={() => setMenuOpen(false)}><Link to="/projects">Projects</Link></li>
-          <li onClick={() => setMenuOpen(false)}><Link to="/contact">Contact</Link></li>
-          <li onClick={() => setMenuOpen(false)}>
-            <a href="/resume.pdf" className="resume-btn">Resume</a>
-          </li>
-        </ul>
-      )}
+      <ul className={`mobile-menu ${menuOpen ? "open" : ""}`}>
+        <li onClick={closeMenu}><Link to="/">Home</Link></li>
+        <li onClick={closeMenu}><Link to="/about">About</Link></li>
+        <li onClick={closeMenu}><Link to="/skills">Skills</Link></li>
+        <li onClick={closeMenu}><Link to="/projects">Projects</Link></li>
+        <li onClick={closeMenu}><Link to="/contact">Contact</Link></li>
+        <li onClick={closeMenu}>
+          <a href="/resume.pdf" target="_blank" className="resume-btn">
+            Resume
+          </a>
+        </li>
+      </ul>
     </nav>
   );
 }
