@@ -1,89 +1,105 @@
+/* NAVBAR MAIN */
 .navbar {
   width: 100%;
-  padding: 15px 20px;
+  padding: 15px 0;
   position: fixed;
   top: 0;
-  left: 0;
-  z-index: 9999;         /* IMPORTANT FIX */
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+/* CONTAINER FOR LOGO + MENU */
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: transparent;
 }
 
+/* LOGO */
 .logo {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
   color: #00b8ff;
 }
 
-/* Desktop Menu */
+/* DESKTOP MENU */
 .desktop-menu {
   display: flex;
-  gap: 25px;
+  gap: 30px;
   list-style: none;
 }
 
-.desktop-menu li a {
-  color: white;
+.desktop-menu a {
+  color: #fff;
   font-size: 18px;
 }
 
-/* Resume Button */
 .resume-btn {
   padding: 6px 15px;
   border: 2px solid #00b8ff;
   border-radius: 8px;
   color: #00b8ff;
+  transition: 0.3s;
 }
 
 .resume-btn:hover {
   background: #00b8ff;
-  color: black;
+  color: #000;
 }
 
-/* Hamburger Icon */
+/* HAMBURGER ICON */
 .hamburger {
-  font-size: 30px;
-  color: white;
   display: none;
+  font-size: 34px;
   cursor: pointer;
+  user-select: none;
+  color: #fff;
+  padding: 8px 12px;  /* increases tap area */
 }
 
-/* MOBILE MENU */
+/* MOBILE MENU HIDDEN BY DEFAULT */
 .mobile-menu {
-  position: fixed;
-  top: 70px;          /* fixes disappearing */
-  left: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  padding: 20px 0;
-  list-style: none;
   display: none;
   flex-direction: column;
-  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  list-style: none;
+  margin-top: 10px;
 }
 
 .mobile-menu.open {
-  display: flex;      /* **IMPORTANT FIX** */
+  display: flex;  /* show when opened */
 }
 
 .mobile-menu li {
   padding: 12px 0;
+  border-bottom: 1px solid #444;
 }
 
-.mobile-menu li a {
-  color: white;
+.mobile-menu a {
+  color: #fff;
   font-size: 20px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
+/* -------------------------
+   RESPONSIVENESS
+-------------------------- */
+@media (max-width: 900px) {
+
   .desktop-menu {
     display: none;
   }
 
   .hamburger {
     display: block;
+  }
+
+  .mobile-menu {
+    width: 100%;
   }
 }
