@@ -1,27 +1,104 @@
+/* =====================================================
+   MAIN WRAPPER
+===================================================== */
 .skills-wrapper {
+  position: relative;
   padding-top: 120px;
-  padding-bottom: 80px;
+  color: #fff;
+  min-height: 100vh;
 }
 
-.skills-grid {
+/* Centers content */
+.skills-content {
+  width: 100%;
   max-width: 1100px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* PAGE TITLE */
+.page-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #00b8ff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* GRID LAYOUT */
+.skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 25px;
 }
 
+/* CARD STYLING */
+.skill-card {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 184, 255, 0.4);
+}
+
 .skill-card h2 {
-  color: #00aaff;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  color: #00b8ff;
+  font-size: 22px;
 }
 
 .skill-card ul {
   list-style: none;
-  padding: 0;
+  padding-left: 0;
 }
 
 .skill-card li {
-  margin-bottom: 8px;
-  color: #cfeaff;
+  margin-bottom: 6px;
+  opacity: 0.9;
+  font-size: 16px;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN (TABLETS)
+===================================================== */
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-title {
+    font-size: 34px;
+  }
+
+  .skill-card {
+    padding: 18px;
+  }
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN (MOBILE PHONES)
+===================================================== */
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 28px;
+  }
+
+  .skill-card {
+    padding: 16px;
+  }
+
+  .skill-card h2 {
+    font-size: 20px;
+  }
+
+  .skill-card li {
+    font-size: 15px;
+  }
 }

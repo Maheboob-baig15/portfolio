@@ -22,18 +22,30 @@ export default function Projects() {
 
   return (
     <div className="projects-wrapper">
+      
+      {/* Background Animation */}
       <BackgroundAnimation />
-      <h1 className="page-title">Projects</h1>
 
-      <div className="projects-grid">
-        {projects.map((p, i) => (
-          <div key={i} className="project-card glass-card">
-            <h2 className="project-title">{p.name}</h2>
-            <p className="project-desc">{p.desc}</p>
-            <p className="project-tech"><span>Tech Stack:</span> {p.tech}</p>
-          </div>
-        ))}
+      <div className="projects-content">
+        <h1 className="page-title">Projects</h1>
+
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <div key={index} className="project-card glass-card">
+              <h2 className="project-title">{project.name}</h2>
+
+              <p className="project-desc">
+                {project.desc}
+              </p>
+
+              <p className="project-tech">
+                <span>Tech Stack:</span> {project.tech}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
+
     </div>
   );
 }

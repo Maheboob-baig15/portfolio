@@ -1,33 +1,116 @@
+/* =====================================================
+   PROJECTS PAGE MAIN WRAPPER
+===================================================== */
 .projects-wrapper {
+  position: relative;
   padding-top: 120px;
-  padding-bottom: 80px;
+  color: #fff;
+  min-height: 100vh;
 }
 
-.projects-grid {
+/* CONTENT CONTAINER TO CENTER EVERYTHING */
+.projects-content {
+  width: 100%;
   max-width: 1100px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* PAGE TITLE */
+.page-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #00b8ff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* PROJECT GRID */
+.projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: 1fr;
   gap: 25px;
 }
 
+/* PROJECT CARD (GLASS EFFECT) */
+.project-card {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 25px;
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-left: 3px solid #00b8ff;
+  box-shadow: 0 0 20px rgba(0, 184, 255, 0.4);
+}
+
+/* TITLE */
 .project-title {
-  color: #00aaff;
+  font-size: 24px;
+  font-weight: 600;
+  color: #00b8ff;
   margin-bottom: 10px;
 }
 
+/* DESCRIPTION */
 .project-desc {
-  color: #cfeaff;
-  margin-bottom: 15px;
+  font-size: 17px;
   line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
+/* TECH STACK */
+.project-tech span {
+  color: #00b8ff;
+  font-weight: 600;
 }
 
 .project-tech {
-  font-size: 0.95rem;
-  color: #8cc9ff;
+  font-size: 16px;
+  opacity: 0.85;
 }
 
-.project-tech span {
-  color: #00aaff;
-  font-weight: bold;
+/* =====================================================
+   TABLET RESPONSIVE STYLES
+===================================================== */
+@media (max-width: 900px) {
+  .page-title {
+    font-size: 34px;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+}
+
+/* =====================================================
+   MOBILE RESPONSIVE STYLES
+===================================================== */
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 28px;
+  }
+
+  .project-card {
+    padding: 18px;
+  }
+
+  .project-title {
+    font-size: 22px;
+  }
+
+  .project-desc {
+    font-size: 15px;
+  }
+
+  .project-tech {
+    font-size: 14px;
+  }
 }

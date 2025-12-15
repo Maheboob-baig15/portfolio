@@ -1,52 +1,39 @@
-import { motion } from "framer-motion";
+import React from "react";
 import "../styles/Home.css";
-import profilePic from "../assets/profile.jpg";
-import BackgroundAnimation from "../components/BackgroundAnimation";
+import profile from "../assets/profile.jpg";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <div className="home-wrapper">
-      <BackgroundAnimation />
+    <section className="home-container" id="home">
+      
+      {/* LEFT SIDE TEXT */}
+      <div className="home-text">
+        <h1>Hi, I'm</h1>
+        <h2>Maheboob Baig</h2>
 
-      <div className="home-container">
-        <motion.div
-          className="home-text"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="title">
-            Hi, I'm <span className="highlight">Maheboob Baig</span>
-          </h1>
+        <p>
+          Full Stack Java Developer & SAP Integration Associate  
+          passionate about building secure, scalable and modern digital solutions.
+        </p>
 
-          <h2 className="subtitle">
-            Full Stack Java Developer & SAP Integration Associate
-          </h2>
+        {/* BUTTONS */}
+        <div className="home-buttons">
+          <a href="/resume.pdf" className="resume-download">Download Resume</a>
 
-          <p className="description">
-            I build scalable, secure, and cloud-integrated digital solutions with
-            clean architecture and modern UI/UX principles.
-          </p>
-
-          <div className="hero-buttons">
-            <a href="/resume.pdf" download className="glass-btn">
-              Download Resume
-            </a>
-            <a href="/contact" className="glass-btn-outline">
-              Contact Me
-            </a>
-          </div>
-        </motion.div>
-
-        <motion.div
-          className="home-photo"
-          initial={{ opacity: 0, scale: 0.7 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
-          <img src={profilePic} alt="profile" className="profile-img" />
-        </motion.div>
+          {/* Correct navigation */}
+          <Link to="/contact" className="contact-btn">
+            Contact Me
+          </Link>
+        </div>
       </div>
-    </div>
+
+      {/* RIGHT SIDE IMAGE */}
+      <div className="profile-wrapper">
+        <img src={profile} alt="Profile" className="profile-photo" />
+      </div>
+
+    </section>
   );
 }
+

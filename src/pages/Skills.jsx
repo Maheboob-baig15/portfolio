@@ -23,21 +23,27 @@ export default function Skills() {
 
   return (
     <div className="skills-wrapper">
+      
+      {/* Background Animation */}
       <BackgroundAnimation />
-      <h1 className="page-title">Skills</h1>
 
-      <div className="skills-grid">
-        {skillGroups.map((group) => (
-          <div key={group.title} className="skill-card glass-card">
-            <h2>{group.title}</h2>
-            <ul>
-              {group.items.map((skill) => (
-                <li key={skill}>{skill}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
+      <div className="skills-content">
+        <h1 className="page-title">Skills</h1>
+
+        <div className="skills-grid">
+          {skillGroups.map((group) => (
+            <div key={group.title} className="skill-card glass-card">
+              <h2>{group.title}</h2>
+              <ul>
+                {group.items.map((skill) => (
+                  <li key={skill}>{skill}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
+
     </div>
   );
 }

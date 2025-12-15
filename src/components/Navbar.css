@@ -1,51 +1,117 @@
-.nav {
+/* NAVBAR MAIN CONTAINER */
+.navbar {
+  width: 100%;
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3); /* transparent but visible */
+  backdrop-filter: blur(8px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 40px;
-  backdrop-filter: blur(15px);
-  background: rgba(0, 0, 0, 0.35);
-  border-bottom: 1px solid rgba(0, 170, 255, 0.2);
-  position: sticky;
-  top: 0;
   z-index: 100;
 }
 
+/* LOGO */
 .logo {
-  color: #00aaff;
-  font-size: 1.6rem;
+  font-size: 26px;
   font-weight: 700;
+  color: #00b8ff;
 }
 
+/* HAMBURGER ICON (MOBILE ONLY) */
+.hamburger {
+  font-size: 32px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+/* NAVIGATION LINKS */
 .nav-links {
-  display: flex;
-  gap: 30px;
   list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
 }
 
-.nav-links a {
-  color: #8cc9ff;
+.nav-links li a {
+  color: #fff;
   text-decoration: none;
-  transition: 0.3s;
+  font-size: 18px;
+  transition: 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #00aaff;
+.nav-links li a:hover {
+  color: #00b8ff;
 }
 
+/* RESUME BUTTON */
 .resume-btn {
-  padding: 6px 14px;
-  border: 1px solid #00aaff;
-  border-radius: 6px;
+  padding: 6px 15px;
+  border: 2px solid #00b8ff;
+  border-radius: 8px;
+  color: #00b8ff;
+  transition: 0.3s ease;
 }
 
-.social-icons a {
-  margin-left: 15px;
-  color: #8cc9ff;
-  font-size: 1.4rem;
-  transition: 0.3s;
+.resume-btn:hover {
+  background: #00b8ff;
+  color: black;
 }
 
-.social-icons a:hover {
-  color: #00aaff;
+/* DESKTOP MENU - ALWAYS SHOW */
+.desktop-menu {
+  display: flex;
 }
+
+/* MOBILE MENU - HIDDEN BY DEFAULT */
+.mobile-menu {
+  display: none;
+}
+
+/* ------------------------------
+   RESPONSIVE NAVBAR (MOBILE VIEW)
+--------------------------------*/
+@media (max-width: 768px) {
+
+  /* Show hamburger icon */
+  .hamburger {
+    display: block;
+  }
+
+  /* Hide desktop menu */
+  .desktop-menu {
+    display: none;
+  }
+
+  /* Mobile Menu Styling */
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 12px;
+    width: 200px;
+    text-align: left;
+  }
+
+  .mobile-menu li {
+    display: block;
+  }
+
+  .mobile-menu a {
+    font-size: 18px;
+  }
+
+  .resume-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
