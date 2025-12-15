@@ -1,117 +1,95 @@
-/* NAVBAR MAIN CONTAINER */
+/* Navbar base */
 .navbar {
   width: 100%;
-  padding: 15px 30px;
+  padding: 15px 20px;
   position: fixed;
   top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.3); /* transparent but visible */
-  backdrop-filter: blur(8px);
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+}
+
+/* Logo + hamburger wrapper */
+.navbar-head {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
 }
 
-/* LOGO */
 .logo {
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 700;
   color: #00b8ff;
 }
 
-/* HAMBURGER ICON (MOBILE ONLY) */
-.hamburger {
-  font-size: 32px;
-  color: #fff;
-  cursor: pointer;
-  display: none;
+/* Desktop Menu */
+.desktop-menu {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 10px;
 }
 
-/* NAVIGATION LINKS */
 .nav-links {
   list-style: none;
-  display: flex;
-  gap: 25px;
-  align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-links li a {
-  color: #fff;
-  text-decoration: none;
+  color: white;
   font-size: 18px;
-  transition: 0.3s ease;
+  text-decoration: none;
 }
 
-.nav-links li a:hover {
-  color: #00b8ff;
-}
-
-/* RESUME BUTTON */
+/* Resume button */
 .resume-btn {
   padding: 6px 15px;
   border: 2px solid #00b8ff;
   border-radius: 8px;
   color: #00b8ff;
-  transition: 0.3s ease;
 }
 
-.resume-btn:hover {
-  background: #00b8ff;
-  color: black;
+/* Hamburger icon (Mobile only) */
+.hamburger {
+  display: none;
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
 }
 
-/* DESKTOP MENU - ALWAYS SHOW */
-.desktop-menu {
-  display: flex;
-}
-
-/* MOBILE MENU - HIDDEN BY DEFAULT */
+/* Mobile menu (hidden by default) */
 .mobile-menu {
   display: none;
+  flex-direction: column;
+  background: rgba(0,0,0,0.6);
+  width: 100%;
+  margin-top: 15px;
+  padding: 15px 0;
+  gap: 12px;
+
+  /* Animation */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
 }
 
-/* ------------------------------
-   RESPONSIVE NAVBAR (MOBILE VIEW)
---------------------------------*/
+.mobile-menu.open {
+  display: flex;
+  max-height: 500px;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
-
-  /* Show hamburger icon */
-  .hamburger {
-    display: block;
-  }
-
-  /* Hide desktop menu */
   .desktop-menu {
     display: none;
   }
 
-  /* Mobile Menu Styling */
-  .mobile-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 12px;
-    width: 200px;
-    text-align: left;
-  }
-
-  .mobile-menu li {
+  .hamburger {
     display: block;
   }
 
-  .mobile-menu a {
-    font-size: 18px;
-  }
-
-  .resume-btn {
-    width: 100%;
-    text-align: center;
+  .mobile-menu {
+    display: flex;
   }
 }
-
