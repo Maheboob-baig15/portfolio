@@ -95,13 +95,18 @@
 }
 
 /* ============================================
-   📱 MOBILE RESPONSIVENESS (TABLETS)
+   📱 MOBILE & TABLET RESPONSIVENESS
 =============================================== */
 @media (max-width: 900px) {
   .home-container {
-    flex-direction: column;
+    flex-direction: column-reverse; /* image first */
     text-align: center;
-    padding: 100px 20px;
+    padding: 80px 20px;             /* 🔽 reduced padding */
+    gap: 20px;                      /* 🔽 reduced gap */
+  }
+
+  .home-text {
+    margin-top: 0;
   }
 
   .home-text h1 {
@@ -115,7 +120,7 @@
   .profile-photo {
     width: 200px;
     height: 200px;
-    margin-top: 25px;
+    margin-top: 0;
   }
 
   .home-buttons {
@@ -155,13 +160,3 @@
     text-align: center;
   }
 }
-
-/* ============================
-   MOBILE FIX: IMAGE FIRST
-============================ */
-@media (max-width: 900px) {
-  .home-container {
-    flex-direction: column-reverse; /* image comes first */
-  }
-}
-
