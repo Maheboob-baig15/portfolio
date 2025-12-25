@@ -156,3 +156,12 @@
   }
 }
 
+/* ============================
+   MOBILE FIX: IMAGE FIRST
+============================ */
+@media (max-width: 900px) {
+  .home-container {
+    flex-direction: column-reverse; /* image comes first */
+  }
+}
+

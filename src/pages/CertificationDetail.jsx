@@ -60,16 +60,17 @@ export default function CertificationDetail() {
               </div>
 
               {/* PDF PREVIEW */}
-              <iframe
-                src={cert.file}
-                title={cert.title}
-                width="100%"
-                height="500"
-                style={{
-                  borderRadius: "12px",
-                  border: "1px solid rgba(255,255,255,0.2)"
-                }}
-              />
+               <iframe
+                 src={`${cert.file}#toolbar=0&navpanes=0&scrollbar=0`}
+                 title={cert.title}
+                 width="100%"
+                 height="500"
+                 style={{
+                 borderRadius: "12px",
+                 border: "1px solid rgba(255,255,255,0.2)"
+                 }}
+                />
+
             </div>
           )}
 
