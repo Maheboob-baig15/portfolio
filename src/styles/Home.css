@@ -160,3 +160,22 @@
     text-align: center;
   }
 }
+
+/* ============================================
+   FINAL MOBILE OVERRIDE (FORCE FIX)
+=============================================== */
+@media (max-width: 900px) {
+  .home-container {
+    padding-top: 60px !important;
+    padding-bottom: 40px !important;
+    gap: 16px !important;
+  }
+
+  .profile-wrapper {
+    margin-bottom: 0 !important;
+  }
+
+  .home-text {
+    margin-top: 0 !important;
+  }
+}
