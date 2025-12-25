@@ -199,3 +199,26 @@
     gap: 16px !important;
   }
 }
+
+/* ============================================
+   MOBILE HERO FINAL FIX (STOP VERTICAL CENTER)
+=============================================== */
+@media (max-width: 900px) {
+  .home-container {
+    align-items: flex-start !important; /* 🔥 KEY FIX */
+    min-height: auto !important;
+    padding-top: 70px !important;
+    padding-bottom: 40px !important;
+    gap: 18px !important;
+  }
+
+  .profile-wrapper {
+    margin-top: 20px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .profile-photo {
+    margin-top: 10px !important;
+  }
+}
