@@ -1,7 +1,10 @@
 import React from "react";
 import "../styles/Home.css";
 import profile from "../assets/profile.jpg";
-import { Link } from "react-router-dom";
+<Link to="/contact" className="contact-btn">
+  Contact Me
+</Link>
+
 
 export default function Home() {
   return (
