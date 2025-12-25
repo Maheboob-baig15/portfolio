@@ -3,7 +3,49 @@ import certifications from "../data/certifications";
 import BackgroundAnimation from "../components/BackgroundAnimation";
 
 export default function CertificationDetail() {
-  const { id } = useParams();
+  const { id } = useParams();{cert.file && (
+  <div style={{ marginTop: "25px" }}>
+    {/* ACTION BUTTONS */}
+    <div
+      style={{
+        display: "flex",
+        gap: "15px",
+        marginBottom: "15px",
+        flexWrap: "wrap"
+      }}
+    >
+      <a
+        href={cert.file}
+        download
+        className="resume-download"
+      >
+        ⬇ Download Certificate
+      </a>
+
+      <a
+        href={cert.file}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="contact-btn"
+      >
+        🔗 Open in New Tab
+      </a>
+    </div>
+
+    {/* PDF PREVIEW */}
+    <iframe
+      src={cert.file}
+      title={cert.title}
+      width="100%"
+      height="500"
+      style={{
+        borderRadius: "12px",
+        border: "1px solid rgba(255,255,255,0.2)"
+      }}
+    />
+  </div>
+)}
+
   const navigate = useNavigate();
 
   const cert = certifications.find((c) => c.id === id);

@@ -103,3 +103,13 @@
     width: 100%;
   }
 }
+
+.desktop-menu li,
+.mobile-menu li,
+.logo {
+  cursor: pointer;
+}
+
+.desktop-menu a {
+  cursor: pointer;
+}
