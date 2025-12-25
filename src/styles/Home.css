@@ -179,3 +179,15 @@
     margin-top: 0 !important;
   }
 }
+
+/* ============================================
+   REAL MOBILE FIX (REMOVE 100vh ISSUE)
+=============================================== */
+@media (max-width: 900px) {
+  .home-container {
+    min-height: auto !important;   /* 🔥 THIS IS THE KEY */
+    padding-top: 60px !important;
+    padding-bottom: 40px !important;
+    gap: 16px !important;
+  }
+}
