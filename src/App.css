@@ -59,3 +59,29 @@
   }
 }
 
+/* ============================================
+   GLOBAL MOBILE SPACING FIX
+=============================================== */
+@media (max-width: 768px) {
+
+  /* All main sections */
+  .home-container,
+  .about-wrapper,
+  .skills-wrapper,
+  .projects-wrapper,
+  .contact-wrapper {
+    min-height: auto !important;
+    padding-top: 70px !important;
+    padding-bottom: 50px !important;
+  }
+
+  /* Section titles spacing */
+  .page-title {
+    margin-bottom: 25px !important;
+  }
+
+  /* Cards spacing */
+  .glass-card {
+    margin-bottom: 20px !important;
+  }
+}

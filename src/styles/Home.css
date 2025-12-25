@@ -154,11 +154,19 @@
     gap: 12px;
   }
 
+  @media (max-width: 480px) {
+  .home-buttons {
+    width: 100%;
+  }
+
   .resume-download,
   .contact-btn {
     width: 100%;
+    display: block;
     text-align: center;
   }
+}
+
 }
 
 /* ============================================
