@@ -1,52 +1,10 @@
 import { useParams, useNavigate } from "react-router-dom";
-import certifications from "../data/certifications";
 import BackgroundAnimation from "../components/BackgroundAnimation";
+import certifications from "../data/certifications";
 
 export default function CertificationDetail() {
-  const { id } = useParams();{cert.file && (
-  <div style={{ marginTop: "25px" }}>
-    {/* ACTION BUTTONS */}
-    <div
-      style={{
-        display: "flex",
-        gap: "15px",
-        marginBottom: "15px",
-        flexWrap: "wrap"
-      }}
-    >
-      <a
-        href={cert.file}
-        download
-        className="resume-download"
-      >
-        ⬇ Download Certificate
-      </a>
-
-      <a
-        href={cert.file}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="contact-btn"
-      >
-        🔗 Open in New Tab
-      </a>
-    </div>
-
-    {/* PDF PREVIEW */}
-    <iframe
-      src={cert.file}
-      title={cert.title}
-      width="100%"
-      height="500"
-      style={{
-        borderRadius: "12px",
-        border: "1px solid rgba(255,255,255,0.2)"
-      }}
-    />
-  </div>
-)}
-
-  const navigate = useNavigate();
+  const { id } = useParams();
+  const goTo = useNavigate(); // 🔹 renamed from navigate
 
   const cert = certifications.find((c) => c.id === id);
 
@@ -74,12 +32,43 @@ export default function CertificationDetail() {
 
           {cert.file && (
             <div style={{ marginTop: "25px" }}>
+              {/* ACTION BUTTONS */}
+              <div
+                style={{
+                  display: "flex",
+                  gap: "15px",
+                  marginBottom: "15px",
+                  flexWrap: "wrap"
+                }}
+              >
+                <a
+                  href={cert.file}
+                  download
+                  className="resume-download"
+                >
+                  ⬇ Download Certificate
+                </a>
+
+                <a
+                  href={cert.file}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-btn"
+                >
+                  🔗 Open in New Tab
+                </a>
+              </div>
+
+              {/* PDF PREVIEW */}
               <iframe
                 src={cert.file}
                 title={cert.title}
                 width="100%"
                 height="500"
-                style={{ borderRadius: "10px" }}
+                style={{
+                  borderRadius: "12px",
+                  border: "1px solid rgba(255,255,255,0.2)"
+                }}
               />
             </div>
           )}
@@ -87,7 +76,7 @@ export default function CertificationDetail() {
           <button
             className="contact-btn"
             style={{ marginTop: "25px" }}
-            onClick={() => navigate("/")}
+            onClick={() => goTo("/")}
           >
             ← Back to Home
           </button>
