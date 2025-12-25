@@ -85,3 +85,25 @@
     margin-bottom: 20px !important;
   }
 }
+
+/* ============================================
+   MOBILE SECTION SPACING NORMALIZATION
+=============================================== */
+@media (max-width: 900px) {
+
+  section {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+
+  section h2,
+  section h3 {
+    margin-bottom: 20px !important;
+  }
+
+  .card,
+  .project-card,
+  .skill-card {
+    margin-bottom: 20px !important;
+  }
+}

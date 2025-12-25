@@ -222,3 +222,44 @@
     margin-top: 10px !important;
   }
 }
+
+/* ============================================
+   MOBILE HERO – FINAL HARD FIX
+=============================================== */
+@media (max-width: 900px) {
+
+  .home-container {
+    flex-direction: column-reverse;
+    align-items: center !important;   /* ✅ CENTER IMAGE */
+    justify-content: flex-start !important;
+    text-align: center;
+    padding-top: 80px !important;
+    padding-bottom: 40px !important;
+    gap: 20px !important;
+  }
+
+  .profile-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center !important; /* ✅ CENTER IMAGE */
+  }
+}
+
+
+/* ===============================
+   MOBILE BUTTON WIDTH FIX
+================================ */
+@media (max-width: 900px) {
+  .home-buttons {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .resume-download,
+  .contact-btn {
+    width: 100% !important;
+    max-width: 320px;
+    text-align: center;
+  }
+}
