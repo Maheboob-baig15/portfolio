@@ -24,3 +24,9 @@ body {
   text-shadow: 0 0 8px #0099ff;
 }
 
+/* ============================================
+   FIX CONTENT UNDER FIXED NAVBAR
+=============================================== */
+body {
+  padding-top: 70px;
+}

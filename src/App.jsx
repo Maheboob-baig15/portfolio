@@ -20,15 +20,16 @@ function App() {
           path="/"
           element={
             <>
-              <section id="home"><Home /></section>
-              <section id="about"><About /></section>
-              <section id="skills"><Skills /></section>
-              <section id="projects"><Projects /></section>
-              <section id="certifications"><Certifications /></section>
-              <section id="contact"><Contact /></section>
+              <Home />
+              <About />
+              <Skills />
+              <Projects />
+              <Certifications />
+              <Contact />
             </>
           }
         />
+
         <Route path="/certification/:id" element={<CertificationDetail />} />
       </Routes>
 
