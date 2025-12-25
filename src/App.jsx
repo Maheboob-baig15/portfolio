@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -6,24 +7,33 @@ import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Certifications from "./pages/Certifications";
+import CertificationDetail from "./pages/CertificationDetail";
 import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <div className="app-wrapper">
+    <BrowserRouter>
       <Navbar />
 
-      <main>
-        <section id="home"><Home /></section>
-        <section id="about"><About /></section>
-        <section id="skills"><Skills /></section>
-        <section id="projects"><Projects /></section>
-        <section id="certifications"><Certifications /></section>
-        <section id="contact"><Contact /></section>
-      </main>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <section id="home"><Home /></section>
+              <section id="about"><About /></section>
+              <section id="skills"><Skills /></section>
+              <section id="projects"><Projects /></section>
+              <section id="certifications"><Certifications /></section>
+              <section id="contact"><Contact /></section>
+            </>
+          }
+        />
+        <Route path="/certification/:id" element={<CertificationDetail />} />
+      </Routes>
 
       <Footer />
-    </div>
+    </BrowserRouter>
   );
 }
 
