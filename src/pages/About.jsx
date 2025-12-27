@@ -4,7 +4,7 @@ import BackgroundAnimation from "../components/BackgroundAnimation";
 
 export default function About() {
   return (
-    <div className="about-wrapper">
+    <div className="about-wrapper" id="about">
       
       {/* Background Animation Behind */}
       <BackgroundAnimation />
@@ -19,17 +19,17 @@ export default function About() {
           {/* RIGHT: TEXT */}
           <div className="about-text">
             <p>
-              I’m a passionate 
-              <span className="highlight"> Full Stack Java Developer </span> 
-              and 
+              I’m a passionate
+              <span className="highlight"> Full Stack Java Developer </span>
+              and
               <span className="highlight"> SAP Certified Integration Associate.</span>
-              I enjoy building scalable applications and solving meaningful 
+              I enjoy building scalable applications and solving meaningful
               problems with clean and modern user experiences.
             </p>
 
             <p>
               My technical expertise includes Java, Spring Boot, React.js,
-              REST APIs, MySQL, AWS, and SAP BTP/Integration Suite.  
+              REST APIs, MySQL, AWS, and SAP BTP/Integration Suite.
             </p>
 
             <p>
