@@ -20,7 +20,7 @@ export default function Home() {
             download="Maheboob_Baig_Resume.pdf"
             className="resume-download"
           >
-            Download Resume
+            View Resume
           </a>
 
           <button
