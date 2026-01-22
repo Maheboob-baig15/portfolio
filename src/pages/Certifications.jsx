@@ -7,7 +7,7 @@ export default function Certifications() {
   const navigate = useNavigate();
 
   return (
-    <div className="skills-wrapper">
+    <div className="skills-wrapper" id="certifications">
       <BackgroundAnimation />
 
       <div className="skills-content">

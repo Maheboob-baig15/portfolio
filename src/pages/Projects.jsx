@@ -36,7 +36,7 @@ export default function Projects() {
   ];
 
   return (
-    <div className="projects-wrapper">
+    <div className="projects-wrapper" id="projects">
       <BackgroundAnimation />
 
       <div className="projects-content">

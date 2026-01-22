@@ -22,7 +22,7 @@ export default function Skills() {
   ];
 
   return (
-    <div className="skills-wrapper">
+    <div className="skills-wrapper" id="skills">
       
       {/* Background Animation */}
       <BackgroundAnimation />

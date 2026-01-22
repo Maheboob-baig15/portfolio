@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <div className="contact-wrapper">
+    <div className="contact-wrapper" id="contact">
       
       {/* Background Animation */}
       <BackgroundAnimation />
