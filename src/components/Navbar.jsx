@@ -31,7 +31,7 @@ export default function Navbar() {
           <li>
             <a
               href="/resume-file.pdf"
-              download="Maheboob_Baig_Resume.pdf"
+              download="Maheboob_baig_software_developer_resume.pdf"
               className="resume-btn"
             >
               Resume

@@ -19,7 +19,7 @@ const certifications = [
     id: "mern-stack",
     title: "MERN Stack Development",
     issuer: "Physics Wallah",
-    file: "/certifications/physics wallah certification.pdf",
+    file: "/certifications/physics wallah certificate.pdf",
     description:
       "Comprehensive MERN stack training covering MongoDB, Express.js, React.js, and Node.js with real-world full stack application development."
   }
